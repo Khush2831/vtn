@@ -116,3 +116,19 @@ setInterval(()=>{
     heartContainer.appendChild(h);
     setTimeout(()=>h.remove(),10000);
 },2200);
+
+
+
+/* ===============================
+   PHOTO CAROUSEL (GENTLE)
+================================ */
+const photos = document.querySelectorAll(".carousel-photo");
+let photoIndex = 0;
+
+if (photos.length > 0) {
+    setInterval(() => {
+        photos[photoIndex].classList.remove("active");
+        photoIndex = (photoIndex + 1) % photos.length;
+        photos[photoIndex].classList.add("active");
+    }, 2000); // 2 seconds per photo
+}
