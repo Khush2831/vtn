@@ -2,11 +2,157 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Will You Be My Valentine? ❤️</title>
+    <title>💖 Megha</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
+
+<!-- Floating hearts -->
+<div id="heart-container"></div>
+
+<!-- Progress dots -->
+<div id="progress"></div>
+
+<div class="container">
+
+    <!-- PAGE 1 -->
+    <section class="page active">
+        <h1 id="typing" class="cursor"></h1>
+        <p>This is something I made… slowly, carefully 💕</p>
+        <button class="sparkle" onclick="nextPage()">Continue 👉</button>
+    </section>
+
+    <!-- PAGE 2 -->
+    <section class="page">
+        <h1>Hey Megha 🤍</h1>
+        <p>
+            I know things haven’t been perfect.<br>
+            But I also know what you mean to me.
+        </p>
+        <button class="sparkle" onclick="nextPage()">Okay</button>
+    </section>
+
+    <!-- PAGE 3 -->
+    <section class="page">
+        <h1>Why You Still Matter ❤️</h1>
+        <ul>
+            <li>The way you understand without words</li>
+            <li>Your honesty, even when it’s hard</li>
+            <li>The comfort that still feels like home</li>
+            <li>The way you make ordinary moments special</li>
+        </ul>
+        <button class="sparkle" onclick="nextPage()">I get it</button>
+    </section>
+
+    <!-- PAGE 4 (PHOTO MEMORY) -->
+    <section class="page">
+        <h1>Us 📸</h1>
+        <img src="photo.jpeg" alt="Us" class="photo">
+        <p>
+            This picture reminds me that what we had was real.
+        </p>
+        <button class="sparkle" onclick="nextPage()">Continue</button>
+    </section>
+
+    <!-- PAGE 5 (Compliment / reassurance) -->
+    <section class="page">
+        <h1>A Small Truth 💬</h1>
+        <p id="compliment">
+            I don’t want perfection. I want honesty, effort, and us trying again.
+        </p>
+        <button class="sparkle" onclick="newCompliment()">Another thought</button>
+        <button class="sparkle" onclick="nextPage()">Continue</button>
+    </section>
+
+    <!-- PAGE 6 (Typing suspense) -->
+    <section class="page">
+        <h1 id="lastTyping" class="cursor"></h1>
+        <button class="sparkle" onclick="nextPage()">Okay…</button>
+    </section>
+
+    <!-- PAGE 7 (THE QUESTION) -->
+    <!-- <section class="page">
+        <h1>So Megha… 💌</h1>
+        <p>
+            Would you like to start fresh with me?<br>
+            No pressure. Just honesty.
+        </p>
+        <div class="buttons">
+            <button class="yes heartbeat sparkle" onclick="yesClicked()">Yes 🤍</button>
+            <button class="no" id="noBtn">Not yet</button>
+        </div>
+    </section> -->
 
 
+    <!-- PAGE 7 (VALENTINE ASK) -->
+<section class="page">
+    <h1>Megha 🤍</h1>
+    <p>
+        I know things haven’t always been easy.<br>
+        But what I feel for you is still real.
+    </p>
+    <p>
+        So this Valentine’s Day,<br>
+        I wanted to ask you something — gently.
+    </p>
+
+    <div class="buttons">
+        <button class="yes heartbeat sparkle" onclick="yesClicked()">
+            Yes, let’s be Valentine’s 🤍
+        </button>
+        <button class="no" id="noBtn">
+            I need a little time
+        </button>
+    </div>
+</section>
+
+
+    <!-- PAGE 8 (FINAL LETTER) -->
+    <!-- <section class="page">
+        <div class="envelope" onclick="openEnvelope()">💌</div>
+        <div id="letter" class="scroll-letter">
+            <h1>Thank You, Megha 🤍</h1>
+            <p>
+                No matter where this goes,<br>
+                I’m grateful we chose honesty.
+            </p>
+            <p>
+                I’m here — patient, sincere, and hopeful.
+            </p>
+            <p>
+                Always rooting for us.
+            </p>
+        </div>
+    </section> -->
+
+
+    <!-- PAGE 8 (CLOSING NOTE) -->
+<section class="page">
+    <div class="envelope" onclick="openEnvelope()">💌</div>
+
+    <div id="letter" class="scroll-letter">
+        <h1>Thank you, Megha 🤍</h1>
+
+        <p>
+            No matter what your answer is,<br>
+            I’m really glad you took the time to read this.
+        </p>
+
+        <p>
+            This wasn’t about pressure.<br>
+            It was about honesty and care.
+        </p>
+        <p>
+            I’m here — patient, sincere, and hopeful.<br>
+            Always rooting for us.
+        </p>
+    </div>
+</section>
+
+
+</div>
+
+<!-- Music -->
 <audio id="introMusic" preload="auto" loop>
     <source src="intro.mp3" type="audio/mpeg">
 </audio>
@@ -14,59 +160,6 @@
 <audio id="bgMusic" preload="auto" loop>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
-
-
-<body>
-
-<div class="container">
-
-    <!-- PAGE 1 -->
-    <section class="page active">
-        <h1>Hey Love 💖</h1>
-        <p>I made something special just for you.</p>
-        <button onclick="nextPage()">Continue 👉</button>
-    </section>
-
-    <!-- PAGE 2 -->
-    <section class="page">
-        <h1>Quick Question 😌</h1>
-        <p>Who is the cutest couple ever?</p>
-        <button onclick="nextPage()">Us 💕</button>
-        <button onclick="nextPage()">Obviously Us 🥰</button>
-    </section>
-
-    <!-- PAGE 3 -->
-    <section class="page">
-        <h1>Reasons I Love You ❤️</h1>
-        <ul>
-            <li>Your smile melts me 🫠</li>
-            <li>You make my worst days better 🌈</li>
-            <li>You’re my safe place 🤍</li>
-            <li>Life with you is magic ✨</li>
-        </ul>
-        <button onclick="nextPage()">Aww 🥹</button>
-    </section>
-
-    <!-- PAGE 4 -->
-    <section class="page">
-        <h1>So… 💌</h1>
-        <p>Will you be my Valentine?</p>
-
-        <div class="buttons">
-            <button class="yes" onclick="nextPage()">YES 💖</button>
-            <button class="no" id="noBtn">No 🙄</button>
-        </div>
-    </section>
-
-    <!-- PAGE 5 -->
-    <section class="page">
-        <h1>YAYYYYY 🎉💘</h1>
-        <p>You just made me the happiest person alive.</p>
-        <p>Happy Valentine’s Day, my love ❤️</p>
-        <p>Forever yours 😘</p>
-    </section>
-
-</div>
 
 <script src="script.js"></script>
 </body>
